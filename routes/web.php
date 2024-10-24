@@ -17,12 +17,10 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('login');
-// });
 
 Auth::routes();
 
+Route::redirect('/', '/home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::post('/set-user-currency' , [HomeController::class , 'setUserCurrency'])->name('setUserCurrency');
 Route::get('/report' , [HomeController::class , 'showReport'])->name('userreportrequest');
