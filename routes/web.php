@@ -22,20 +22,19 @@ Auth::routes();
 
 Route::redirect('/', '/home');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::post('/set-user-currency' , [HomeController::class , 'setUserCurrency'])->name('setUserCurrency');
-Route::get('/report' , [HomeController::class , 'showReport'])->name('userreportrequest');
-Route::get('/viewreport/{id}' , [HomeController::class , 'viewReport'])->name('viewuserreport');
-
-Route::post('/set-user-report-request' , [HomeController::class , 'setUserReportRequest'])->name('setUserReportRequest');
 
 
 
+
+Route::get('setCurrencyCountry' , [CurrencyController::class , 'setCurrencyCountry'])->name('updatecurrencycountry');
 
 Route::middleware('auth')->group(function () {
 
     // Run this to update currency
-    Route::get('setCurrencyCountry' , [CurrencyController::class , 'setCurrencyCountry'])->name('updatecurrencycountry');
+    Route::post('/set-user-currency' , [HomeController::class , 'setUserCurrency'])->name('setUserCurrency');
+    Route::get('/report' , [HomeController::class , 'showReport'])->name('userreportrequest');
 
+    Route::get('/viewreport/{id}' , [HomeController::class , 'viewReport'])->name('viewuserreport');
 
-
+    Route::post('/set-user-report-request' , [HomeController::class , 'setUserReportRequest'])->name('setUserReportRequest');
 });
