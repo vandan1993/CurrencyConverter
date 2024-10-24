@@ -36,7 +36,7 @@ $('#currencyselect').select2({
 
             $.ajax({
                 type: 'POST',
-                url: 'http://127.0.0.1:8000/set-user-currency', // Replace with your API endpoint
+                url: '/set-user-currency', // Replace with your API endpoint
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 data: JSON.stringify(formData),
                 contentType: 'application/json',
@@ -126,7 +126,7 @@ $('#currencyselect').select2({
 
             $.ajax({
                 type: 'POST',
-                url: 'http://127.0.0.1:8000/set-user-report-request', // Replace with your API endpoint
+                url: '/set-user-report-request', // Replace with your API endpoint
                 headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
                 data: JSON.stringify(formData),
                 contentType: 'application/json',

@@ -85,7 +85,7 @@ if(!empty($quotedata)){
 
 
             <div class="card mt-4">
-                <div class="card-header">{{ __('Conversation') }}</div>
+                <div class="card-header">{{ __('Conversion') }}</div>
 
                 <div class="card-body">
                     <div class="container mt-2">
@@ -94,7 +94,7 @@ if(!empty($quotedata)){
                                 <table class="table table-bordered table-striped">
                                     <thead>
                                         <th>Date</th>
-                                        <th>Conversation ({{ $reportData[0]->source }} TO {{$reportData[0]->currency }})</th>
+                                        <th>Conversion ({{ $reportData[0]->source }} TO {{$reportData[0]->currency }})</th>
                                     </thead>
                                     <tbody>
 
