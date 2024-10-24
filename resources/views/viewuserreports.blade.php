@@ -81,8 +81,13 @@ if(!empty($quotedata)){
                 </div>
             </div>
 
-            <canvas id="myChart"></canvas>
+            <div class="card mt-4">
+                <div class="card-header">{{ __('Chart View') }}</div>
 
+                <div class="card-body">
+                 <canvas id="myChart"></canvas>
+                </div>
+            </div>
 
             <div class="card mt-4">
                 <div class="card-header">{{ __('Conversion') }}</div>
